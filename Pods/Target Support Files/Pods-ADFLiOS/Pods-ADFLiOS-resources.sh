@@ -91,6 +91,20 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/AppFrameworkInfo.plist"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Debug.xcconfig"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Generated.xcconfig"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Release.xcconfig"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/.flutter-plugins"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/AppFrameworkInfo.plist"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Debug.xcconfig"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Generated.xcconfig"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Release.xcconfig"
+  install_resource "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/.flutter-plugins"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -14,6 +14,9 @@
 		A1240802229E8DC2003688B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1240801229E8DC2003688B6 /* Assets.xcassets */; };
 		A1240805229E8DC2003688B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1240803229E8DC2003688B6 /* LaunchScreen.storyboard */; };
 		A1240808229E8DC2003688B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1240807229E8DC2003688B6 /* main.m */; };
+		A124084A229FC5C2003688B6 /* ADFlutterRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1240849229FC5C2003688B6 /* ADFlutterRouter.m */; };
+		A124084D229FC62D003688B6 /* ADFlutterContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A124084C229FC62D003688B6 /* ADFlutterContainerViewController.m */; };
+		A1240850229FC6A3003688B6 /* ADRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A124084F229FC6A3003688B6 /* ADRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		A1240804229E8DC2003688B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1240806229E8DC2003688B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1240807229E8DC2003688B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1240848229FC5C2003688B6 /* ADFlutterRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADFlutterRouter.h; sourceTree = "<group>"; };
+		A1240849229FC5C2003688B6 /* ADFlutterRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADFlutterRouter.m; sourceTree = "<group>"; };
+		A124084B229FC62D003688B6 /* ADFlutterContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADFlutterContainerViewController.h; sourceTree = "<group>"; };
+		A124084C229FC62D003688B6 /* ADFlutterContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADFlutterContainerViewController.m; sourceTree = "<group>"; };
+		A124084E229FC6A3003688B6 /* ADRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADRouter.h; sourceTree = "<group>"; };
+		A124084F229FC6A3003688B6 /* ADRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADRouter.m; sourceTree = "<group>"; };
 		DD7CA6020E0E94E2D8811014 /* libPods-ADFLiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ADFLiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +95,12 @@
 				A12407F9229E8DC0003688B6 /* AppDelegate.m */,
 				A12407FB229E8DC0003688B6 /* ViewController.h */,
 				A12407FC229E8DC0003688B6 /* ViewController.m */,
+				A124084E229FC6A3003688B6 /* ADRouter.h */,
+				A124084F229FC6A3003688B6 /* ADRouter.m */,
+				A1240848229FC5C2003688B6 /* ADFlutterRouter.h */,
+				A1240849229FC5C2003688B6 /* ADFlutterRouter.m */,
+				A124084B229FC62D003688B6 /* ADFlutterContainerViewController.h */,
+				A124084C229FC62D003688B6 /* ADFlutterContainerViewController.m */,
 				A12407FE229E8DC0003688B6 /* Main.storyboard */,
 				A1240801229E8DC2003688B6 /* Assets.xcassets */,
 				A1240803229E8DC2003688B6 /* LaunchScreen.storyboard */,
@@ -106,6 +121,8 @@
 				A12407F1229E8DC0003688B6 /* Sources */,
 				A12407F2229E8DC0003688B6 /* Frameworks */,
 				A12407F3229E8DC0003688B6 /* Resources */,
+				D7735FBA049472773C7FD5A6 /* [CP] Embed Pods Frameworks */,
+				EA465737F254BEA28A01AB0C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,6 +197,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D7735FBA049472773C7FD5A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS-frameworks.sh",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/App.framework",
+				"${PODS_ROOT}/Flutter/Flutter.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/App.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA465737F254BEA28A01AB0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS-resources.sh",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/AppFrameworkInfo.plist",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Debug.xcconfig",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Generated.xcconfig",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Release.xcconfig",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/.flutter-plugins",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppFrameworkInfo.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Debug.xcconfig",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Generated.xcconfig",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Release.xcconfig",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.flutter-plugins",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -187,9 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A124084A229FC5C2003688B6 /* ADFlutterRouter.m in Sources */,
+				A124084D229FC62D003688B6 /* ADFlutterContainerViewController.m in Sources */,
 				A12407FD229E8DC0003688B6 /* ViewController.m in Sources */,
 				A1240808229E8DC2003688B6 /* main.m in Sources */,
 				A12407FA229E8DC0003688B6 /* AppDelegate.m in Sources */,
+				A1240850229FC6A3003688B6 /* ADRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

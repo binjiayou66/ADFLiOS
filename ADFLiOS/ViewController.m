@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ADFlutterRouter.h"
 
 @interface ViewController ()
 
@@ -14,10 +15,15 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
+- (IBAction)onClickButton:(id)sender
+{
+    [[ADFlutterRouter sharedRouter] openPage:@"hello_flutter" params:@{} animated:YES completion:^(BOOL f){}];
+}
 
 @end

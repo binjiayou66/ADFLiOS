@@ -1,0 +1,2 @@
+# ADFLiOSResource
+Resource repo.
