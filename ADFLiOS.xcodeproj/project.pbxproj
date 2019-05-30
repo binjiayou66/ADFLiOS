@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28D8009A24A557BF6153CDFC /* libPods-ADFLiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7CA6020E0E94E2D8811014 /* libPods-ADFLiOS.a */; };
 		A12407FA229E8DC0003688B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A12407F9229E8DC0003688B6 /* AppDelegate.m */; };
 		A12407FD229E8DC0003688B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A12407FC229E8DC0003688B6 /* ViewController.m */; };
 		A1240800229E8DC0003688B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12407FE229E8DC0003688B6 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FB06D7633671CC95B68A8D7 /* Pods-ADFLiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADFLiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS.release.xcconfig"; sourceTree = "<group>"; };
+		83AFC7F2BE4D3557EC569BD0 /* Pods-ADFLiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADFLiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A12407F5229E8DC0003688B6 /* ADFLiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADFLiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12407F8229E8DC0003688B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A12407F9229E8DC0003688B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		A1240804229E8DC2003688B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1240806229E8DC2003688B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1240807229E8DC2003688B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD7CA6020E0E94E2D8811014 /* libPods-ADFLiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ADFLiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D8009A24A557BF6153CDFC /* libPods-ADFLiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143D59DEC756BAA8F3910675 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD7CA6020E0E94E2D8811014 /* libPods-ADFLiOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E29A9C0DF067BA20C22B3E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83AFC7F2BE4D3557EC569BD0 /* Pods-ADFLiOS.debug.xcconfig */,
+				1FB06D7633671CC95B68A8D7 /* Pods-ADFLiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A12407EC229E8DC0003688B6 = {
 			isa = PBXGroup;
 			children = (
 				A12407F7229E8DC0003688B6 /* ADFLiOS */,
 				A12407F6229E8DC0003688B6 /* Products */,
+				9E29A9C0DF067BA20C22B3E6 /* Pods */,
+				143D59DEC756BAA8F3910675 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A124080B229E8DC2003688B6 /* Build configuration list for PBXNativeTarget "ADFLiOS" */;
 			buildPhases = (
+				38BC9441BD18E77407B6DDE8 /* [CP] Check Pods Manifest.lock */,
 				A12407F1229E8DC0003688B6 /* Sources */,
 				A12407F2229E8DC0003688B6 /* Frameworks */,
 				A12407F3229E8DC0003688B6 /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38BC9441BD18E77407B6DDE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ADFLiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A12407F1229E8DC0003688B6 /* Sources */ = {
@@ -283,6 +329,7 @@
 		};
 		A124080C229E8DC2003688B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83AFC7F2BE4D3557EC569BD0 /* Pods-ADFLiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +347,7 @@
 		};
 		A124080D229E8DC2003688B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB06D7633671CC95B68A8D7 /* Pods-ADFLiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
