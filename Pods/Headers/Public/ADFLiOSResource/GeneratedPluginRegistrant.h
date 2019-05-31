@@ -1,0 +1,1 @@
+../../../ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/GeneratedPluginRegistrant.h

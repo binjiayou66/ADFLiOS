@@ -205,7 +205,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ADFLiOS/Pods-ADFLiOS-frameworks.sh",
 				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/App.framework",
-				"${PODS_ROOT}/Flutter/Flutter.framework",
+				"${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Flutter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (

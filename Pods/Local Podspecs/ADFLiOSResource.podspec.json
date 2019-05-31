@@ -1,0 +1,30 @@
+{
+  "name": "ADFLiOSResource",
+  "version": "0.8",
+  "summary": "ADFLiOSResource.",
+  "description": "this is ADFLiOSResource",
+  "homepage": "https://github.com/binjiayou66/ADFLiOSResource",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "naibin": "nbliu@91jkys.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/binjiayou66/ADFLiOSResource.git",
+    "tag": "0.8"
+  },
+  "source_files": "ADFLiOSResource/ADFLiOSResource/*.{h,m}",
+  "resources": [
+    "ADFLiOSResource/ADFLiOSResource/*.{plist,xcconfig}",
+    "ADFLiOSResource/ADFLiOSResource/.flutter-plugins"
+  ],
+  "vendored_frameworks": [
+    "ADFLiOSResource/ADFLiOSResource/App.framework"
+  ],
+  "requires_arc": true
+}

@@ -1,0 +1,1 @@
+../../../../ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h

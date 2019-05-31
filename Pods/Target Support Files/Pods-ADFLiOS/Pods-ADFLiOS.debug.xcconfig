@@ -1,11 +1,12 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource" "${PODS_ROOT}/Flutter"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ADFLiOSResource" "${PODS_ROOT}/Headers/Public/Flutter" "${PODS_ROOT}/Headers/Public/flutter_boost" "${PODS_ROOT}/Headers/Public/xservice_kit"
+HEADER_SEARCH_PATHS = $(inherited) "${PROJECT_DIR}/.."/** "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ADFLiOSResource"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/flutter_boost" "${PODS_CONFIGURATION_BUILD_DIR}/xservice_kit"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ADFLiOSResource" -isystem "${PODS_ROOT}/Headers/Public/Flutter" -isystem "${PODS_ROOT}/Headers/Public/flutter_boost" -isystem "${PODS_ROOT}/Headers/Public/xservice_kit"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"flutter_boost" -l"xservice_kit" -framework "App" -framework "Flutter"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ADFLiOSResource" "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/flutter_boost" "${PODS_ROOT}/ADFLiOSResource/ADFLiOSResource/ADFLiOSResource/libxservice_kit"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ADFLiOSResource"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"ADFLiOSResource" -l"c++" -l"flutter_boost" -l"xservice_kit" -framework "App" -framework "Flutter"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+VALID_ARCHS = x86_64 arm64 armv7
